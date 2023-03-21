@@ -50,11 +50,7 @@ label.search {
     height: 20px;
     resize: none;
     width: 200px;
-    pointer-events: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    
 }
 
 input.search {
@@ -70,12 +66,10 @@ input.search {
     font-size: smaller;
     text-align: left 3px;
     margin-left: 5px;
-    pointer-events: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-
 }
 
 img.logo {
