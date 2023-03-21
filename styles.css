@@ -50,6 +50,7 @@ label.search {
     height: 20px;
     resize: none;
     width: 200px;
+    user-select: none;
 }
 
 input.search {
@@ -65,12 +66,14 @@ input.search {
     font-size: smaller;
     text-align: left 3px;
     margin-left: 5px;
+    user-select: none;
 
 }
 
 img.logo {
     max-width: 23px;
     height: auto;
+    user-select: none;
 }
 
 label.headerlbl {
@@ -79,6 +82,7 @@ label.headerlbl {
     font-weight: 600;
     font-size: small;
     padding-right: 55px;
+    user-select: none;
 }
 
 button.headerbtn {
@@ -88,6 +92,7 @@ button.headerbtn {
     border: none;
     cursor: pointer;
     transition: all 0.3s linear;
+    user-select: none;
 }
 
 button.headerbtn:hover {
