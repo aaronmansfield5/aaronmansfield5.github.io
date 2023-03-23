@@ -36,8 +36,14 @@
                 let newRepo = document.getElementsByClassName('git-repo-example')[0].cloneNode(true)
                 newRepo.setAttribute('style', "visibility: visible; position: inherit;")
                 newRepo.getElementsByClassName('repo-title')[0].innerHTML = repoData.name
-                newRepo.getElementsByClassName('repo-desc')[0].innerHTML = repoData.description
+                newRepo.getElementsByClassName('repo-desc')[0].innerHTML = `${repoData.description}\n${repoData.url}`
+                newRepo.getElementsByClassName('repo-lang')[0].innerHTML = repoData.coding.language
+                newRepo.getElementsByClassName('repo-star-count')[0].innerHTML = repoData.stars.count
+                newRepo.getElementsByClassName('repo-stars')[0].href = repoData.stars.url
+                newRepo.getElementsByClassName('repo-fork-count')[0].innerHTML = repoData.forks.count
+                newRepo.getElementsByClassName('repo-forks')[0].href = repoData.forks.url
                 newRepo.getElementsByClassName('repo-code')[0].setAttribute('style', `fill: ${repoData.coding.colour};`)
+                newRepo.getElementsByClassName('repo-url')[0].href = repoData.url
                 document.getElementsByClassName("repos")[0].append(newRepo)
             })
 
