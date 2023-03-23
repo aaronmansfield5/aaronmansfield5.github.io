@@ -19,7 +19,7 @@
                 const repoData = {
                     url: repo.html_url,
                     name: repo.name.replaceAll(/-(?!\d)/g, ' '),
-                    description: repo.description,
+                    description: repo.description.split(":")[0].replaceAll('-', ' ') + ':' + repo.description.split(":")[1],
                     coding: {
                         language: repo.language,
                         colour: colours[repo.language]
