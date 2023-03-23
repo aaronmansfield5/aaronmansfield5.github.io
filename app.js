@@ -18,7 +18,7 @@
                 const repo = data[key]
                 const repoData = {
                     url: repo.html_url,
-                    name: repo.name,
+                    name: repo.name.replaceAll(/-(?!\d)/g, ' '),
                     description: repo.description,
                     coding: {
                         language: repo.language,
