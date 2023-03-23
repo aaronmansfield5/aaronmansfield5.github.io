@@ -25,11 +25,11 @@
                         colour: colours[repo.language]
                     },
                     stars: {
-                        url: repo.stargazers_url,
+                        url: repo.stargazers_url.replace('api.', '').replace('/repos', ''),
                         count: repo.stargazers_count
                     },
                     forks: {
-                        url: repo.forks_url,
+                        url: repo.forks_url.replace('api.', '').replace('/repos', ''),
                         count: repo.forks_count
                     }
                 }
