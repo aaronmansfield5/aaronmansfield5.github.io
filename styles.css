@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
     background-color: var(--bg-color);
     color: var(--text-color-rgb);
 }
@@ -48,6 +48,9 @@ label.search {
     height: 20px;
     resize: none;
     min-width: 200px;
+    display: flex;
+    align-items: center;
+    list-style: none;
 }
 
 input.search {
@@ -56,7 +59,7 @@ input.search {
     width: clamp(140px, 180px, 220px);
     outline: 0;
     color: var(--text-color-rgb);
-    font-family: "Montserrat" !important;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
     font-size: smaller;
     font-weight: 350;
     margin-left: 5px;
@@ -95,7 +98,7 @@ label.header-lbl {
 }
 
 button.header-btn {
-    font-family: "Montserrat" !important;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
     color: var(--text-color-rgb);
     background-color: transparent;
     font-weight: 500;
@@ -151,7 +154,7 @@ div.bio {
     padding-left: 12.5%;
     opacity: 0.95;
     cursor: text;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
 }
 
 div.about-me {
@@ -174,7 +177,6 @@ label.section-title {
 }
 
 div.social-media {
-    position: relative;
     gap: 4px;
     display: flex;
     flex-flow: wrap;
@@ -182,9 +184,134 @@ div.social-media {
 }
 
 div.code-languages {
-    position: relative;
     gap: 4px;
     display: flex;
     flex-flow: wrap;
     justify-content: center;
+}
+
+main {
+    margin-left: clamp(100px, 23%, 250px);
+    margin-top: 48px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+main > div {
+    margin-top: 20px;
+}
+
+.repos {
+    margin-top: 8px;
+    gap: 8px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    column-count: 3;
+}
+
+.repos > div {
+    background-color: var(--text-color-rgb);
+    border-radius: 2px;
+    width: clamp(225px, 10%, 400px);
+}
+
+.git-repo-example {
+    visibility: hidden;
+    position: absolute;
+}
+
+.repo-url {
+    display: flex;
+    align-items: center;
+    color: #0366d6;
+    text-decoration: none;
+    padding-left: 7px;
+    margin-left: 4px;
+    padding-top: 9px;
+    font-size: 12px;
+    padding-bottom: 8px;
+    line-height: 1;
+}
+
+.repo-url > label {
+    cursor: pointer;
+    padding-bottom: 4px;
+}
+
+.repo-url:hover {
+    text-decoration: underline;
+}
+
+.repo-desc {
+    color: #586069 !important;
+    font-size: 10px;
+    font-weight: 350;
+    margin-left: clamp(14px, 5%, 18px);
+    margin-right: 18px;
+    padding-bottom: 5px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.repo-link {
+    color: #586069 !important;
+    font-size: 10px;
+    font-weight: 350;
+    margin-left: clamp(14px, 5%, 18px);
+    margin-right: 15px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.repo-data {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-bottom: 5px;
+    margin-left: clamp(14px, 5%, 18px);
+}
+
+.repo-lang {
+    color:hsl(0, 0%, 0%);
+    font-size: x-small;
+    margin-right: auto;
+}
+
+.repo-stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-right: 10px;
+}
+
+.repo-forks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-right: 20px;
+}
+
+.repo-stars {
+    font-size: x-small;
+    text-decoration: none;
+}
+
+.repo-stars:hover {
+    text-decoration: underline;
+    color: #0366d6;
+}
+
+.repo-forks {
+    font-size: x-small;
+    text-decoration: none;
+}
+
+.repo-forks:hover {
+    text-decoration: underline;
+    color: #0366d6;
 }
