@@ -297,8 +297,10 @@ main > div {
 }
 
 .repo-stars {
+    cursor: pointer;
     font-size: x-small;
     text-decoration: none;
+    color:hsl(0, 0%, 0%);
 }
 
 .repo-stars:hover {
@@ -307,8 +309,10 @@ main > div {
 }
 
 .repo-forks {
+    cursor: pointer;
     font-size: x-small;
     text-decoration: none;
+    color:hsl(0, 0%, 0%);
 }
 
 .repo-forks:hover {
