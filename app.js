@@ -4,7 +4,7 @@
         'C#': '#178600'
     }
         
-    fetch('https://api.github.com/users/aaronmansfield5/repos?sort=updated&direction=desc')
+    fetch('https://api.github.com/users/aaronmansfield5/repos?sort=added&direction=desc')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -19,7 +19,7 @@
                 const repoData = {
                     url: repo.html_url,
                     name: repo.name.replaceAll(/-(?!\d)/g, ' '),
-                    description: repo.description.split(":")[0].replaceAll('-', ' ') + ':' + repo.description.split(":")[1],
+                    description: repo.description.split(":")[0].replaceAll(/-(?!\d)/g, ' ') + ':' + repo.description.split(":")[1],
                     coding: {
                         language: repo.language,
                         colour: colours[repo.language]
