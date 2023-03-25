@@ -29,8 +29,8 @@
                         count: repo.stargazers_count
                     },
                     forks: {
-                        url: repo.forks_url.replace('api.', '').replace('/repos', ''),
-                        count: repo.html_url + '/network/members'
+                        url: repo.html_url + '/network/members',
+                        count: repo.forks_count
                     }
                 }
                 let newRepo = document.getElementsByClassName('git-repo-example')[0].cloneNode(true)
