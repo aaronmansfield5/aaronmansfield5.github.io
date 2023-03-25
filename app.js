@@ -30,7 +30,7 @@
                     },
                     forks: {
                         url: repo.forks_url.replace('api.', '').replace('/repos', ''),
-                        count: repo.forks_count
+                        count: repo.html_url + '/network/members'
                     }
                 }
                 let newRepo = document.getElementsByClassName('git-repo-example')[0].cloneNode(true)
