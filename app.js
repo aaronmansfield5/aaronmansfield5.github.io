@@ -29,7 +29,7 @@
                         count: repo.stargazers_count
                     },
                     forks: {
-                        url: repo.html_url + '/network/members',
+                        url: repo.forks_url.replace('api.', '').replace('/repos', ''),
                         count: repo.forks_count
                     }
                 }
@@ -44,7 +44,22 @@
                 newRepo.getElementsByClassName('repo-forks')[0].href = repoData.forks.url
                 newRepo.getElementsByClassName('repo-code')[0].setAttribute('style', `fill: ${repoData.coding.colour};`)
                 newRepo.getElementsByClassName('repo-url')[0].href = repoData.url
-                document.getElementsByClassName("repos")[0].append(newRepo)
+                if(repo.name.toLowerCase().includes("npm-package")) {
+                    newRepo.getElementsByClassName('npm-downloads')[0].setAttribute('style', "visibility: visible; position: inherit;")
+                    fetch(`https://api.npmjs.org/downloads/point/last-year/${repo.name.toLowerCase().split("-npm-package")[0]}`).then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        newRepo.getElementsByClassName('npm-download-count')[0].innerHTML = data.downloads
+                        newRepo.getElementsByClassName("npm-downloads")[0].href = `https://www.npmjs.com/package/${repo.name.toLowerCase().split("-npm-package")[0]}`
+                    })
+                    document.getElementsByClassName("npms")[0].append(newRepo)
+                } else {
+                    document.getElementsByClassName("repos")[0].append(newRepo)
+                }
             })
 
         })
