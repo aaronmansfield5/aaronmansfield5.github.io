@@ -243,6 +243,10 @@ main > div {
     position: absolute;
 }
 
+.repo-title {
+    text-transform: capitalize;
+}
+
 .repo-icon {
     fill: hsl(0, 0%, 100%);
 }
@@ -365,6 +369,6 @@ a > label {
     cursor: pointer;
 }
 
-.repo-data > a > svg:not(.repo-code) {
+.repo-data > a > svg {
     fill: white;
 }
