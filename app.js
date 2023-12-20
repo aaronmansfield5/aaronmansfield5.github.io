@@ -1,7 +1,9 @@
 (async function () {
     const colours = {
         'JavaScript': '#f1e05a',
-        'C#': '#178600'
+        'C#': '#178600',
+        'Python': '#3572A5',
+        'Lua': '#000080'
     }
         
     fetch('https://api.github.com/users/aaronmansfield5/repos?sort=added&direction=desc')
