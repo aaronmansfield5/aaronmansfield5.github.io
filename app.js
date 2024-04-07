@@ -1,3 +1,16 @@
+function formatNumber(num) {
+  if (num >= 1000000000) {
+    return (num / 1000000000).toFixed(1).replace(/\.0$/, '') + 'b';
+  }
+  if (num >= 1000000) {
+    return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'm';
+  }
+  if (num >= 1000) {
+    return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+  }
+  return num.toString();
+}
+
 (async function () {
     const colours = {
         'JavaScript': '#f1e05a',
@@ -40,9 +53,9 @@
                 newRepo.getElementsByClassName('repo-title')[0].innerHTML = repoData.name
                 newRepo.getElementsByClassName('repo-desc')[0].innerHTML = `${repoData.description}\n${repoData.url}`
                 newRepo.getElementsByClassName('repo-lang')[0].innerHTML = repoData.coding.language
-                newRepo.getElementsByClassName('repo-star-count')[0].innerHTML = repoData.stars.count
+                newRepo.getElementsByClassName('repo-star-count')[0].innerHTML = formatNumber(parseInt(repoData.stars.count, 10))
                 newRepo.getElementsByClassName('repo-stars')[0].href = repoData.stars.url
-                newRepo.getElementsByClassName('repo-fork-count')[0].innerHTML = repoData.forks.count
+                newRepo.getElementsByClassName('repo-fork-count')[0].innerHTML = formatNumber(parseInt(repoData.forks.count, 10))
                 newRepo.getElementsByClassName('repo-forks')[0].href = repoData.forks.url
                 newRepo.getElementsByClassName('repo-code')[0].setAttribute('style', `fill: ${repoData.coding.colour};`)
                 newRepo.getElementsByClassName('repo-url')[0].href = repoData.url
@@ -55,7 +68,7 @@
                         return response.json();
                     })
                     .then(data => {
-                        newRepo.getElementsByClassName('npm-download-count')[0].innerHTML = data.downloads
+                        newRepo.getElementsByClassName('npm-download-count')[0].innerHTML = formatNumber(parseInt(data.downloads, 10))
                         newRepo.getElementsByClassName("npm-downloads")[0].href = `https://www.npmjs.com/package/${repo.name.toLowerCase().split("-npm-package")[0]}`
                     })
                     document.getElementsByClassName("npms")[0].append(newRepo)
