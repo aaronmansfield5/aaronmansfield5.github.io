@@ -51,7 +51,7 @@ function formatNumber(num) {
                 let newRepo = document.getElementsByClassName('git-repo-example')[0].cloneNode(true)
                 newRepo.setAttribute('style', "visibility: visible; position: inherit;")
                 newRepo.getElementsByClassName('repo-title')[0].innerHTML = repoData.name
-                newRepo.getElementsByClassName('repo-desc')[0].innerHTML = `${repoData.description}\n${repoData.url}`
+                newRepo.getElementsByClassName('repo-desc')[0].innerHTML = `${repoData.description}`
                 newRepo.getElementsByClassName('repo-lang')[0].innerHTML = repoData.coding.language
                 newRepo.getElementsByClassName('repo-star-count')[0].innerHTML = formatNumber(parseInt(repoData.stars.count, 10))
                 newRepo.getElementsByClassName('repo-stars')[0].href = repoData.stars.url
