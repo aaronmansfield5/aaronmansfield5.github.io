@@ -1,4 +1,7 @@
+@import url('https://raw.githubusercontent.com/aaronmansfield5/aaronmansfield5.github.io/main/font.theme.css');
+
 :root {
+    font-family: 'SF Pro Display', system-ui !important;
     --bg-color: #0d1117;
     --header-color: #161b22;
     --search-bar-color: #0d1117;
@@ -12,7 +15,7 @@
 }
 
 body {
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
+    font-family: 'SF Pro Display', system-ui !important;
     background-color: var(--bg-color);
     color: var(--text-color-rgb);
 }
@@ -59,7 +62,7 @@ input.search {
     width: clamp(140px, 180px, 220px);
     outline: 0;
     color: var(--text-color-rgb);
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
+    font-family: 'SF Pro Display', system-ui !important;
     font-size: smaller;
     font-weight: 350;
     margin-left: 5px;
@@ -98,7 +101,7 @@ label.header-lbl {
 }
 
 button.header-btn {
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
+    font-family: 'SF Pro Display', system-ui !important;
     color: var(--text-color-rgb);
     background-color: transparent;
     font-weight: 500;
@@ -154,7 +157,7 @@ div.bio {
     padding-left: 12.5%;
     opacity: 0.95;
     cursor: text;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
+    font-family: 'SF Pro Display', system-ui !important;
 }
 
 div.about-me {
