@@ -1,7 +1,8 @@
-@import url('https://raw.githubusercontent.com/aaronmansfield5/aaronmansfield5.github.io/main/font.theme.css');
+@import url('fonts/theme.css');
 
 :root {
-    font-family: 'SF Pro Display', system-ui !important;
+    font-family: 'SF Pro', system-ui !important;
+    font-stretch: expanded;
     --bg-color: #0d1117;
     --header-color: #161b22;
     --search-bar-color: #0d1117;
@@ -15,7 +16,6 @@
 }
 
 body {
-    font-family: 'SF Pro Display', system-ui !important;
     background-color: var(--bg-color);
     color: var(--text-color-rgb);
 }
