@@ -101,10 +101,11 @@ label.header-lbl {
 }
 
 button.header-btn {
-    font-family: 'SF Pro Display', system-ui !important;
+    font-family: 'SF Pro', system-ui !important;
     color: var(--text-color-rgb);
     background-color: transparent;
-    font-weight: 500;
+    font-stretch: expanded;
+    font-weight: 300;
     border: none;
     cursor: pointer;
     transition: all 0.15s linear;
