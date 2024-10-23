@@ -29,7 +29,7 @@ function formatNumber(num) {
         .then(data => {
             Object.keys(data).forEach(key => {
                 if(!data[key]) return false;
-                if (data[key].name === data[key].owner.login || data[key].name.endsWith('.github.io') || data[key].description.includes(".github.io") return false;
+                if (data[key].name === data[key].owner.login || data[key].name.endsWith('.github.io') || data[key].description.includes(".github.io")) return false;
                 const repo = data[key]
                 const repoData = {
                     url: repo.html_url,
